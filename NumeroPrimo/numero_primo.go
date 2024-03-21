@@ -14,14 +14,24 @@ func VerificaPrimo(number int) bool {
     return number > 1
 }
 
-func main() {
-  var num int
-  fmt.Println("Digite um número: ")
-  fmt.Scan(&num)
-  res := VerificaPrimo(num)
-  if res == true {
+
+func ShowUserMessage(isPrime bool){
+  if isPrime {
     fmt.Println("[+] É primo!")
   }else{
     fmt.Println("[-] Não é primo!")
   }
+}
+
+func main() {
+  ShowUserMessage(VerificaPrimo(0))
+  ShowUserMessage(VerificaPrimo(1))
+  ShowUserMessage(VerificaPrimo(2))
+  ShowUserMessage(VerificaPrimo(3))
+  ShowUserMessage(VerificaPrimo(7))
+  ShowUserMessage(VerificaPrimo(83))
+  ShowUserMessage(VerificaPrimo(100))
+  ShowUserMessage(VerificaPrimo(991))
+  ShowUserMessage(VerificaPrimo(104729))
+  ShowUserMessage(VerificaPrimo(14348907))
 }
