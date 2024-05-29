@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form action="/calculadora/resultado" method="post">
+        <input type="text" name="num1" placeholder="Número 1" required>
+        <input type="text" name="num2" placeholder="Número 2" required>
+        <select name="operacao" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button type="submit">Calcular</button>
+    </form>
+    <div>
+        <p id="mensagemErro"></p>
+    </div>
+</body>
+</html>
